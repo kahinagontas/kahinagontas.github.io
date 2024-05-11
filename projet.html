@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #slider img{ display: none;border-radius: 10px;width: 400px;height: 400px;margin-left:20%;}
+       .menu {
+    height: 60px;
+    list-style: none;
+    padding: 10px;
+    margin: 40px;
+}
+
+.menu li {
+    float: left;
+    width: 200px;
+}
+
+.menu li a:link, .menu li a:visited {
+    display: block;
+    color: #FFF;
+    background: #293245;
+    padding: 6px 10px;
+    border-right: 1px solid #FFF;
+    text-align: center;
+    text-decoration: none;
+}
+
+.menu li a:hover {background-color: #199BD2;}
+.menu li a:active {background-color: #808080;}
+
+.menu .sousmenu {
+    list-style-type: none;
+    display: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+}
+
+.menu .sousmenu li {
+    float: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+}
+
+.menu .sousmenu li a:link, .menu li a:visited {
+    display: block;
+    color: #FFF;
+    text-decoration: none;
+    background-color: #808080;
+}
+
+.menu .sousmenu li a:hover {
+    background-color: #d219c6;
+}
+
+.menu li:hover .sousmenu {
+    display: block;
+}
+       
+
+
+
+
+
+.menu a:hover.actif{
+    background-color: #ed2794;
+    color: #ffe843;
+    border-color: #ffe843;
+}
+img{width: 100%;height: 5%;}
+.slideshow-container {
+  max-width: 900px;
+
+  position: relative;
+  margin: auto;margin-top: 8%;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50px;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.prev{position:absolute;top:50%;left: 0px; color: black;
+    padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;}
+.next{position: absolute;top:50%;right:0px;color: black;
+    padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;}
+
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+body{background-image: url('image9.jpg');}
+
+nav{ margin-top:-10%;}
+.buttton{
+  margin-top:-27%;
+	position: absolute;
+	top: 350%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.btn{
+	border: 1px solid #fcf2f2;
+	padding: 5px 20px;
+	color: #fff;
+	transition: 0.6s ease;
+	font-size: 18px;
+	text-decoration: none;
+}
+
+.btn:hover{
+	background-color: #fff;
+	color: #000;
+}
+
+.images{
+display: flex;
+animation-duration: 30s;
+animation-name: mesimages;
+animation-iteration-count: infinite;
+
+}
+@keyframes mesimages{
+  0%{transform: translateX(0);}
+25%{transform: translateX();}
+50%{transform: translateX(-1280px);}
+75%{transform: translateX(-1920px);}
+100%{transform: translateX(0);}
+}
+#coroussel{ 
+height: 300px;
+overflow: hidden;
+border: solid;
+margin-top: 80px;
+
+}
+footer{ background-color: rgba(32, 95, 58, 0.983);width: 800px;height:150px ;display: flex;justify-content: space-around;
+border-radius: 20px;align-items:center ; margin-top: 700px;}
+.fac{width: 15px;height:15px;margin-bottom: 1px;}
+    </style>
+    
+</head>
+
+<body>
+    <header>
+        <img src="Bonnard_Logo-1080x281.png">
+    </header>
+    <nav>
+      <ul class="menu">
+        
+        <li><a href="#"> menu</a>
+          <ul class="sousmenu">
+            <li><a href="plats et salades.html">plats et salades</a></li>
+            <li><a href="vins.html">vins et boissons</a></li>
+            <li><a href="dessert.html">Dessert et gateau</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="reservation.html">reservation</a>
+        </li>
+        <li>
+          <a href="localisation.html">localisation</a>
+        </li>
+    </ul>
+</nav>
+<div id="coroussel" >
+  <div class="images">
+      <img src="c:\Users\USER\Desktop\tpl2\2_SLIDER-4.jpg" alt="bosson">
+      <img src="c:\Users\USER\Desktop\tpl2\2_SLIDER-7.jpg" alt="bosson">
+      <img src="c:\Users\USER\Desktop\tpl2\2_SLIDER-8.jpg" alt="bosson">
+      <img src="c:\Users\USER\Desktop\tpl2\2_SLIDER-1.jpg" alt="bosson">
+     
+  </div>
+ </div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span>
+  <span class="dot" ></span>
+  <span class="dot" ></span>
+</div>
+<h1> Bonnard</h1>
+<h1> Marais</h1>
+<h2> une cuisine généreuse et gourmande,100% épicurienne et végétarienne.</h2>
+<p> Situé au 18 rur des Graviliers dan le 3 ème arrondissement de Paris, Bonnard est un restaurant instimiste 
+    qui propose une cuisine végétale et gourmande dans un cadre soigné de pierre et de voulours.
+    Bonnard s'attache à travailler des produits de saison issus des circuits courts pour creer des plats bistronomiques aussi beaux
+    que bons.
+    Bonnard propose egalement une carte de vins soigneusement selectionnée,privilégiant les vins issus de l'agriculteure biodynamique.
+    C'EST BEAU ,C'EST BON,C'EST BONNARD.
+</p>
+<div class="buttton">
+  <a class="btn" href="plats et salades.html"> MENU BONNARD</a>
+  <a class="btn" href="reservation.html"> RESERVATON</a>
+  <a class="btn" href="localisation.html"> LOCALISATION</a>
+</div>
+
+
+<div id="slider" style="margin-top: 180px;">
+  <div class="contrainer" >
+  <img  style="position: absolute;" src="c:\Users\USER\Desktop\tpl2\2_SLIDER-3.jpg" alt=image" id="img1">
+  <img  style="position: absolute;"src="c:\Users\USER\Desktop\tpl2\2_SLIDER-7.jpg" alt="image" id="img2">
+  <img style="position: absolute;" src="c:\Users\USER\Desktop\tpl2\2_SLIDER-4.jpg" alt="image" id="img3">
+  <img style="position: absolute;" src="c:\Users\USER\Desktop\tpl2\AK__20210624_2-1024x1536.jpg" alt="image" id="img4">
+  <img style="position: absolute;" src="2_SLIDER-3.jpg" alt="image" id="img6">
+  
+ 
+  </div>
+</div>
+
+  <script src="c:\Users\USER\Desktop\tpl2\jquery-3.7.0.min.js"></script>
+  <script>
+      $(document).ready(function(){
+          var image=$('#slider img');
+          var numSlides = image.length;
+          var activeSlide =0;
+          var speed =2000;
+          var fade=1000;
+          var timer= setInterval(rotate,speed);
+          image.eq(activeSlide).show();
+          function rotate(){
+              activeSlide++;
+              if(activeSlide==numSlides){ activeSlide=0;}
+              image.not(activeSlide).fadeOut(fade);
+              image.eq(activeSlide).fadeIn(fade);
+          }
+      })
+      
+             
+
+  </script>
+
+<footer >
+  <div>
+  <ul> 
+      <li class="facebook"> <img src="c:\Users\USER\Desktop\tpl2\facebook.png" class="fac"> <a href="www">Facebook</a></li>
+      <li class="instagramme"> <img src="c:\Users\USER\Desktop\tpl2\instagram.PNG" class="fac"><a href="www">instagram</a></li>
+      <li class="twitter"><img src="c:\Users\USER\Desktop\tpl2\twitter.PNG" class="fac"> <a href="www">twitter</a></li>
+  </ul>
+</div>
+<div style="color: white;font-size: 18px;"> BONNARD <br> contacter nous!<br>18 rue des Graviliers 75003 Paris<br>mentions légales-Politique de confidentialté</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{ width: 300px;height: 300px;}
+        .menu {
+    display: flex;                /* Transformation en flexbox */
+    padding:0;                    /* Suppression des marges internes */
+    background-image: url('image1.jpeg');     /* Ajout de la couleur d'arrière-plan */
+    justify-content: space-around;/* Alignements des liens dans le menu */
+    height: 90px;
+    margin-top: -8px;
+    border-radius: 20px;
+    
+}
+.menu li {
+    list-style-type: none ;       /* Suppression des puces */
+  
+}
+.menu a {
+    display:block;                /* Transformation en block */
+    min-width: 120px;             /* Largeur minimale des liens */   
+    
+    margin:10px;               /* Marges externes */
+    padding: 3px;            /* Marges internes */
+    text-align: center;           /* Centrage du texte */   
+    background-color: #1ABC9C;    /* Arrière-plan */
+    color: #fff;                  /* Couleur du texte */
+    text-decoration: none;        /* Suppression du soulignement */
+    border: 1px solid #fff;       /* Ajout d'une bordure */
+    border-radius: 4px;           /* Arrondis des bordures */
+    
+    transition: all 1s ;          /* Ajout des effets de transition */
+    margin-top: 15px;
+}
+.menu a.actif {    
+    background-color: #000 ; 
+    color: #1ABC9C ;
+    border-color: #1ABC9C ;
+}
+.menu a:hover,
+.menu a:hover.actif{
+    background-color: #ed2794;
+    color: #ffe843;
+    border-color: #ffe843;
+}
+body{background-image: url('images (1).jpeg');}
+table{background-color: #08432c;}
+.res{font-size: 50px; color: #fff;}
+h1{color: rgb(230, 252, 30);}
+    </style>
+</head>
+<body>
+    <header>
+        <ul class="menu">
+            <li>
+              <a href="projet.html" class="actif">Accueil</a>
+            </li>
+            <li>
+              <a href="vins.html">vins et boissons</a>
+            </li>
+            <li>
+              <a href="dessert.html">Dessert</a>
+            </li>
+        </ul>
+    </header>
+    <h1> faisez juste un clique sur un menu il s'agrandit!</h1>
+    <img src="c:\Users\USER\Desktop\tpl2\menu2.png" alt="image" id="img2">
+    <img src="c:\Users\USER\Desktop\tpl2\menu3.jpg" alt="image" id="img3">
+    <img src="c:\Users\USER\Desktop\tpl2\menu4.jpg" alt="image" id="img4">
+    <img src="c:\Users\USER\Desktop\tpl2\menu5.jpg" alt="image" id="img6">
+    <img src="c:\Users\USER\Desktop\tpl2\menu6.jpg" alt="image" id="img9">
+    
+   
+    <script src="c:\Users\USER\Desktop\tpl2\jquery-3.7.0.min.js"></script>
+
+    
+    <script>
+        $(function(){
+           
+            var ancien='';
+            $('img').click(function(){
+                var ddd="#"+$(this).attr("id");//recuperer l'element
+                if (ancien!= '' && ancien!=ddd)
+                {
+                    $(ancien).animate({'height':'150px','width':'150px',},1000);
+    
+                }
+                $(ddd).animate({'height':'500px','width':'500px',},1000);
+                ancien=ddd;
+
+
+            });
+        });
+            
+    </script>
+</body>
+</html>

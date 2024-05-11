@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+.menu {
+    display: flex;                /* Transformation en flexbox */
+    padding:0;                    /* Suppression des marges internes */
+    background-image: url('image1.jpeg');     /* Ajout de la couleur d'arrière-plan */
+    justify-content: space-around;/* Alignements des liens dans le menu */
+    height: 90px;
+    margin-top: -8px;
+    border-radius: 20px;
+    
+}
+.menu li {
+    list-style-type: none ;       /* Suppression des puces */
+  
+}
+.menu a {
+    display:block;                /* Transformation en block */
+    min-width: 120px;             /* Largeur minimale des liens */   
+    
+    margin:10px;               /* Marges externes */
+    padding: 3px;            /* Marges internes */
+    text-align: center;           /* Centrage du texte */   
+    background-color: #1ABC9C;    /* Arrière-plan */
+    color: #fff;                  /* Couleur du texte */
+    text-decoration: none;        /* Suppression du soulignement */
+    border: 1px solid #fff;       /* Ajout d'une bordure */
+    border-radius: 4px;           /* Arrondis des bordures */
+    
+    transition: all 1s ;          /* Ajout des effets de transition */
+    margin-top: 15px;
+}
+.menu a.actif {    
+    background-color: #000 ; 
+    color: #1ABC9C ;
+    border-color: #1ABC9C ;
+}
+.menu a:hover,
+.menu a:hover.actif{
+    background-color: #ed2794;
+    color: #ffe843;
+    border-color: #ffe843;
+}
+body{background-image: url('images (1).jpeg');}
+table{background-color: #08432c;}
+.res{font-size: 50px; color: #fff;}
+///////
+.menuu {
+    display: flex;                /* Transformation en flexbox */
+    padding:0;                    /* Suppression des marges internes */
+    background-image: url('image1.jpeg');     /* Ajout de la couleur d'arrière-plan */
+    justify-content: space-around;/* Alignements des liens dans le menu */
+    
+    border-radius: 20px;
+
+    
+}
+.menuu li {
+    list-style-type: none ;       /* Suppression des puces */
+  
+}
+.menuu a {
+    display:block;                /* Transformation en block */
+    min-width: 120px;             /* Largeur minimale des liens */   
+    margin:10px;               /* Marges externes */
+    padding: 3px;            /* Marges internes */
+    text-align: center;           /* Centrage du texte */   
+        /* Arrière-plan */
+    color: #fff;                  /* Couleur du texte */
+    text-decoration: none;        /* Suppression du soulignement */
+    border: 1px solid #fff;       /* Ajout d'une bordure */
+    border-radius:80px;           /* Arrondis des bordures */
+    height: 100px;
+    transition: all 1s ;          /* Ajout des effets de transition */
+    margin-top: -40px;
+}
+.menuu a.actiff {    
+   /* background-color: #2e97cf42 ; */
+    color: #1b4038 ;
+    border-color: #1abc9c03 ;
+    
+}
+.menuu a:hover,
+.menuu a:hover.actiff{
+    background-color: #778989;
+    color: #ffe843;
+    border-color: #ffe843;
+}
+.reserv{margin-top: 160px;margin-right: 40px;}
+
+.res{font-size: 20px; color: #fff;}
+string{font-size: 55px;}
+
+.contact-section-title{color: #fff;}
+footer{ background-color: black;width: 800px;height:100px ;display: flex;justify-content: space-around;
+border-radius: 20px;align-items:center ; margin-top: 80px;}
+img{width: 15px;height:15px;margin-bottom: 1px;}
+    
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li>
+          <a href="projet.html" class="actif">Accueil</a>
+        </li>
+        <li>
+          <a href="plats et salades.html">menu</a>
+        </li>
+        <li>
+          <a href="formulaire.html">resevation</a>
+        </li>
+    </ul>
+    <div class="reserv">
+    <ul class="menuu">
+        <li>
+          <a href="formulaire.html" class="actiff"><string>Effectuez votre reservation</string></a>
+        </li>
+        </ul>
+    </div>
+    <section class="location-section" id="location">
+        <h2 class="contact-section-title">Localisation:</h2>
+        <iframe src="https://maps.app.goo.gl/LNQi6dEPBfZ5LsSTA" width="600" height="450" style="border:0;" 
+        allowfullscreen="" loading="lazy"></iframe>
+    </section>
+    
+     <footer >
+        <div>
+        <ul> 
+            <li class="facebook"> <img src="c:\Users\USER\Desktop\dev w\image\instagram.PNG"> <a href="www">Facebook</a></li>
+            <li class="instagramme"> <img src="c:\Users\USER\Desktop\dev w\image\instagram.PNG"><a href="www">instagram</a></li>
+            <li class="twitter"><img src="c:\Users\USER\Desktop\dev w\image\twitter.PNG"> <a href="www">twitter</a></li>
+        </ul>
+    </div>
+    <div style="color: white;font-size: 20px;">BONNARD <br> contacter nous!<br>18 rue des Graviliers 75003 Paris<br>mentions légales-Politique de confidentialté</div>
+    </footer>
+      
+   
+</body>
+</html>
